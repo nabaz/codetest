@@ -28,6 +28,11 @@
 - [run migration : php artisan migrate]
 - [ seed the db: php artisan db:seed ]
 - the app using default laravel auth.
+- to run the test suit:
+```
+./vendor/bin/phpunit ./tests/Unit/Models
+./vendor/bin/phpunit ./tests/Unit/Controllers
+```
 
 
 ## About Laravel
