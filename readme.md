@@ -11,7 +11,8 @@
 - [git clone git@github.com:nabaz/codetest.git]
 - [ cd codetest and then composer install]
 - [ install database use .env] i.e:
- `DB_CONNECTION=mysql
+ ```
+ DB_CONNECTION=mysql
  DB_HOST=127.0.0.1
  DB_PORT=33060
  DB_DATABASE=dbaname
@@ -22,7 +23,8 @@
  TESTING_DB_PORT=port
  TESTING_DB_DATABASE=dbname
  TESTING_DB_USERNAME=dbusername
- TESTING_DB_PASSWORD=password`
+ TESTING_DB_PASSWORD=password
+```
 - [run migration : php artisan migrate]
 - [ seed the db: php artisan db:seed ]
 - the app using default laravel auth.
