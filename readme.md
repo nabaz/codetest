@@ -7,6 +7,27 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## Installation
+- [git clone git@github.com:nabaz/codetest.git]
+- [ cd codetest and then composer install]
+- [ install database use .env] i.e:
+ `DB_CONNECTION=mysql
+ DB_HOST=127.0.0.1
+ DB_PORT=33060
+ DB_DATABASE=dbaname
+ DB_USERNAME=dbuser
+ DB_PASSWORD=password
+
+ TESTING_DB_HOST=host
+ TESTING_DB_PORT=port
+ TESTING_DB_DATABASE=dbname
+ TESTING_DB_USERNAME=dbusername
+ TESTING_DB_PASSWORD=password`
+- [run migration : php artisan migrate]
+- [ seed the db: php artisan db:seed ]
+- the app using default laravel auth.
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
