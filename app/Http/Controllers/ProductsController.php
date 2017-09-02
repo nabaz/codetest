@@ -41,7 +41,6 @@ class ProductsController extends ApiController
         $attributes = array_get($request, 'data.attributes', []);
         $product = new \App\Product($attributes);
         $product->save();
-        return $this->getCreatedResponse($product);
     }
 
     public function update(Request $request, $id)

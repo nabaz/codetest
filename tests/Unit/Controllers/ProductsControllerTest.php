@@ -63,7 +63,7 @@ class ProductsControllerTest extends TestCase
      ]);
     $this->loginUser($user1);
     $response = $this->json('POST',
-         '/products/', [
+         '/products', [
                 'data' => [
                     'attributes' => [
                       'name' => 'product1 test name',
