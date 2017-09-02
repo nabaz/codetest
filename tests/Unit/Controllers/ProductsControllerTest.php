@@ -62,8 +62,8 @@ class ProductsControllerTest extends TestCase
       'email' => 'foo@bar.com',
      ]);
     $this->loginUser($user1);
-    $response = $this->json('post',
-         '/products', [
+    $response = $this->json('POST',
+         '/products/', [
                 'data' => [
                     'attributes' => [
                       'name' => 'product1 test name',
@@ -88,9 +88,7 @@ class ProductsControllerTest extends TestCase
     $produt1 = factory(\App\Product::class)->create([
      'user_id' => $user1->id,
     ]);
-
-    $response = $this->json('GET', '/products', ['id' => $produt1->id]);
-
+    $response = $this->delete('/products/'.$produt1->id);
     $this->assertEquals(200, $response->status());
   }
 }

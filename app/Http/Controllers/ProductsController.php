@@ -39,7 +39,7 @@ class ProductsController extends ApiController
     public function store(Request $request)
     {
         $attributes = array_get($request, 'data.attributes', []);
-        $product = new \App\Product($request);
+        $product = new \App\Product($attributes);
         $product->save();
         return $this->getCreatedResponse($product);
     }
@@ -54,9 +54,7 @@ class ProductsController extends ApiController
 
     public function destroy($id)
     {
-      $product = \App\Product::findOrFail($id);
+      $product = \App\Product::find($id);
       $product->delete();
-
-      return $this->getCodeResponse(Response::HTTP_NO_CONTENT);
     }
 }

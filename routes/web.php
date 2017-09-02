@@ -18,23 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/products', 'ProductsController@index')->name('products');
-Route::get(
-       '/products/{id}',
-       ['uses' => 'ProductsController@show']
-   );
-Route::post(
-       '/products',
-       ['uses' => 'ProductsController@store']
-   );
-Route::post(
-   '/products/{id}',
-   ['uses' => 'ProductsController@update']
-);
-Route::delete(
-    '/products/{id}',
-    ['uses' => 'ProductsController@destroy']
-);
+Route::resource('/products', 'ProductsController');
 
 // users route
 Route::get(
